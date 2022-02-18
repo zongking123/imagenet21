@@ -13,7 +13,7 @@ def print_hi(name):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
-    with open('class_names.txt', 'r', encoding='utf-8') as f, open('res_class_names.txt', 'w',encoding='utf-8') as fw:
+    with open('class_names.txt', 'r', encoding='utf-8') as f, open('res_class_names2.txt', 'w',encoding='utf-8') as fw:
         lines = f.readlines()
         for line in lines:
             line = line.strip()
@@ -24,6 +24,7 @@ if __name__ == '__main__':
                 line = ''
                 for value in lineList:
                     line = line + " " + value
+            line = line.lstrip()
             fw.write(line + '\n')
 
 
